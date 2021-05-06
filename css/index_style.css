@@ -142,3 +142,28 @@ header ul li a:hover
     background: #ff5e8e;
     transform: translateY(-10px); /*ขยับไปในแนวแกน Y -10px*/
 }
+.mosque
+{
+    position: absolute;
+    bottom: 0; /*ระยะหางจากด้านล้าง*/
+    right: 0; /*ระยะหางจากด้านขวา*/
+    max-width: 700px;
+}
+
+/* now, make it responsive*/
+
+@media (max-width: 991px)
+{
+    section 
+    {
+        position: 150px 20px;
+    }
+    header
+    {
+        padding: 20px;
+    }
+    .navigation
+    {
+       display: none; 
+    }
+}
