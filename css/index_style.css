@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 *
 {
  margin: 0; /*margin ระยะขอบใช้เพื่อสร้างพื้นที่รอบ ๆ องค์ประกอบนอกขอบเขตที่กำหนดไว้ */
  padding: 0; /*Padding ใช้เพื่อสร้างช่องว่างรอบ ๆ เนื้อหาขององค์ประกอบภายในขอบเขตที่กำหนดไว้ */
  box-sizing: border-box;
- font-family: 'Pangolin', sans-serif;
+ font-family: 'Itim', sans-serif;
 }
 section
 {
  position: relative;
  width: 100%;
- min-height: 100vh;
+ min-height: 100vh; /*vh อิงตามคามสูงของขนาดหน้า*/
  padding: 100px;
  display: flex;
  justify-content: flex-start; /*จัดตำแหน่งรายการ*/
@@ -21,7 +22,7 @@ header
  position: fixed;
  top: 0;
  left: 0;
- width: 100%;
+ width: 100%; /*vh อิงตามคามสูง*/
  padding: 40px 100px;
  display: flex;
  justify-content: space-between;
@@ -33,7 +34,7 @@ header .logo
     position: relative;
     color: #1bb7ff;
     display: inline-block;
-    font-size: 2em;
+    font-size: 2em; /*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
     text-decoration: none; /*ตั้งค่าการตกแต่งข้อความที่แตกต่างกัน*/
     font-weight: 800;
 }
@@ -47,8 +48,8 @@ header ul li
  display: inline-block;
  color: #3367f8;
  font-weight: 600;
- font-size: 1.1em;
- margin-left: 10px; /*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
+ font-size: 1.1em;/*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
+ margin-left: 10px; 
  display: inline-block;
  padding: 8px;
  text-decoration: none;
@@ -58,7 +59,7 @@ header ul li a
     display: inline-block;
     color: #45a7ec;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.1em; /*กำหนดขนาดตัวอักษรสำหรับ*/
     margin-left: 10px;
     display: inline-block;
     padding: 8px 18px;
@@ -99,10 +100,45 @@ header ul li a:hover
     display: inline-block;
     margin-top: 20px; /*ตั้งค่าระยะขอบบน*/
     padding: 15px 30px; /*Padding ใช้เพื่อสร้างช่องว่างรอบ ๆ เนื้อหาขององค์ประกอบภายในขอบเขตที่กำหนดไว้*/
-    background: #d47592;
+    background: #ff5e8e;
     color: #fff;
     font-size: 1.2em;
     border-radius: 40px; /*ตัดขอบ*/
     letter-spacing: 1px; /*ตั้งค่าระยะห่างของตัวอักษร*/
     text-decoration: none;
+}
+.sci
+{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center; /*จัดแนวรายการที่ยืดหยุ่นที่กึ่งกลางของภาชนะ*/
+    align-items: center; /*จัดตำแหน่งกึ่งกลางสำหรับรายการทั้งหมด*/
+}
+.sci li 
+{
+    list-style: none; /*ลบจุดหน้าแถว*/
+}
+.sci li a
+{
+    position: relative;
+    display: inline-block; /*อนุญาตให้ตั้งค่าความกว้างและความสูงให้กับองค์ประกอบ*/
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #3367f8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+.sci li a img
+{
+    filter: invert(1); /*invert สีของ icon*/
+    transform: scale(0.5); /*ขนาดของ img*/
+}
+.sci li a:hover
+{
+    background: #ff5e8e;
+    transform: translateY(-10px); /*ขยับไปในแนวแกน Y -10px*/
 }
