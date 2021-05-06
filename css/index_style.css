@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+*
+{
+ margin: 0; /*margin ระยะขอบใช้เพื่อสร้างพื้นที่รอบ ๆ องค์ประกอบนอกขอบเขตที่กำหนดไว้ */
+ padding: 0; /*Padding ใช้เพื่อสร้างช่องว่างรอบ ๆ เนื้อหาขององค์ประกอบภายในขอบเขตที่กำหนดไว้ */
+ box-sizing: border-box;
+ font-family: 'Pangolin', sans-serif;
+}
+section
+{
+ position: relative;
+ width: 100%;
+ min-height: 100vh;
+ padding: 100px;
+ display: flex;
+ justify-content: flex-start; /*จัดตำแหน่งรายการ*/
+ align-items: center; /*จัดตำแหน่งกึ่งกลางสำหรับรายการทั้งหมดขององค์ประกอบ <section>*/
+}
+header 
+{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ padding: 40px 100px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 1000;
+}
+header .logo
+{
+    position: relative;
+    color: #1bb7ff;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none; /*ตั้งค่าการตกแต่งข้อความที่แตกต่างกัน*/
+    font-weight: 800;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+ display: inline-block;
+ color: #3367f8;
+ font-weight: 600;
+ font-size: 1.1em;
+ margin-left: 10px; /*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
+ display: inline-block;
+ padding: 8px;
+ text-decoration: none;
+}
+header ul li a
+{
+    display: inline-block;
+    color: #45a7ec;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    user-select: none; /*ป้องกันการเลือกข้อความ*/
+}
+header ul li a.active,
+header ul li a:hover
+{
+   background: #45a7ec; 
+   color: rgb(255, 255, 255);
+   border-radius: 30px;
+}
+.content 
+{
+    position: relative; /*ตำแหน่งสัมพันธ์กับตำแหน่งปกติ*/
+    
+}
+.content .textBox
+{
+    position: relative;
+    max-width: 550px;
+}
+.content .textBox h2
+{
+    color: #45a7ec;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+.content .textBox p
+{
+    font-size: 1.2em;
+    color: black;
+}
+.content .textBox a
+{
+    display: inline-block;
+    margin-top: 20px; /*ตั้งค่าระยะขอบบน*/
+    padding: 15px 30px; /*Padding ใช้เพื่อสร้างช่องว่างรอบ ๆ เนื้อหาขององค์ประกอบภายในขอบเขตที่กำหนดไว้*/
+    background: #d47592;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 40px; /*ตัดขอบ*/
+    letter-spacing: 1px; /*ตั้งค่าระยะห่างของตัวอักษร*/
+    text-decoration: none;
+}
