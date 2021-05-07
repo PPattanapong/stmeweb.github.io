@@ -16,6 +16,7 @@ section
  display: flex;
  justify-content: flex-start; /*จัดตำแหน่งรายการ*/
  align-items: center; /*จัดตำแหน่งกึ่งกลางสำหรับรายการทั้งหมดขององค์ประกอบ <section>*/
+ overflow-x: hidden; /*ส่วนที่ล้นถูกตัดออกและส่วนที่เหลือของเนื้อหาจะมองไม่เห็น*/
 }
 header 
 {
@@ -34,10 +35,26 @@ header .logo
     position: relative;
     color: #1bb7ff;
     display: inline-block;
-    font-size: 2em; /*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
+    font-size: 3em; 
     text-decoration: none; /*ตั้งค่าการตกแต่งข้อความที่แตกต่างกัน*/
     font-weight: 800;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
 }
+/*animation transform*/
+@keyframes slide_left 
+{   0%
+    {
+        transform: translateX(-100px)
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 header ul
 {
     position: relative;
@@ -48,7 +65,7 @@ header ul li
  display: inline-block;
  color: #3367f8;
  font-weight: 600;
- font-size: 1.1em;/*ตั้งค่าระยะขอบด้านซ้ายสำหรับ*/
+ font-size: 1.1em;
  margin-left: 10px; 
  display: inline-block;
  padding: 8px;
@@ -64,7 +81,25 @@ header ul li a
     display: inline-block;
     padding: 8px 18px;
     user-select: none; /*ป้องกันการเลือกข้อความ*/
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.2s;
+    animation-delay: calc(0.2s * var(--i));
 }
+@keyframes slide_top
+{
+    0%
+    {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 header ul li a.active,
 header ul li a:hover
 {
@@ -89,11 +124,30 @@ header ul li a:hover
     margin-bottom: 10px;
     line-height: 1.2em;
     font-weight: 700;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+@keyframes slide_right
+{
+    0%
+    {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .content .textBox p
 {
     font-size: 1.2em;
     color: black;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 1.75s;
 }
 .content .textBox a
 {
@@ -106,7 +160,9 @@ header ul li a:hover
     border-radius: 40px; /*ตัดขอบ*/
     letter-spacing: 1px; /*ตั้งค่าระยะห่างของตัวอักษร*/
     text-decoration: none;
-    
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 2s;
 }
 .sci
 {
@@ -132,6 +188,9 @@ header ul li a:hover
     display: flex;
     justify-content: center;
     transition: 0.2s ease-in-out;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .sci li a img
 {
@@ -149,6 +208,20 @@ header ul li a:hover
     bottom: 0; /*ระยะหางจากด้านล้าง*/
     right: 0; /*ระยะหางจากด้านขวา*/
     max-width: 700px;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 3.5s;
+}
+@keyframes fade_in
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+    }
 }
 
 /* now, make it responsive*/
@@ -180,6 +253,15 @@ header ul li a:hover
         align-items: center;
         flex-direction: column;
     }
+    header ul li 
+    {
+        margin: 10px 0px;
+    }
+    header ul li a
+    {
+        margin-left: 0;
+        font-size: 2em;
+    }
     .toggle
     {
        position: fixed;
@@ -202,4 +284,24 @@ header ul li a:hover
         background-repeat: no-repeat; /*no-repeat ไม่สร้างภาพซำ*/
         background-position: center;
     }
+    .mosque
+    {
+        max-width: 400px;
+    }
+   .content .textBox h2
+   {
+       font-size: 2.5em;
+   }
+   .content .textBox p 
+   {
+       font-size: 1em;
+   }
 }
+@media (max-width: 600px)
+{
+    .mosque
+    {
+        opacity: 0.4 !important;
+    }
+}
+/*now , i'll make in animted*/
