@@ -18,7 +18,8 @@
 {
     display: flex;
     justify-content: flex-start;
-    padding: 10px
+    padding: 10px;
+
 }
 .text-donate
 {
@@ -27,18 +28,18 @@
     align-items: center;
     min-height: 100vh;
 }
-.text-donate h2 
+ h2 
 {
     font-size: 6em;
     text-align: center;
 }
-.text-donate h2 span 
+h2 span 
 {
     position: relative;
     display: inline-flex;
     color: #03a9f4;
 }
-.text-donate h2 span:nth-child(odd)
+ h2 span:nth-child(odd)
 {
     color: #414141;
     line-height: 1em;
@@ -46,15 +47,15 @@
     letter-spacing: -1em;
     transition: 1s ease-in-out;
 }
-.text-donate h2:hover span:nth-child(odd)
+ h2:hover span:nth-child(odd)
 {
     letter-spacing: 0;
 }
-.text-donate h2 span:nth-child(2)
+ h2 span:nth-child(2)
 {
     margin-right: 10px;
 }
-.text-donate h2 span:nth-child(2)::before
+ h2 span:nth-child(2)::before
 {
     content: '2';
     position: absolute;
@@ -62,18 +63,40 @@
     right: -10px;
     font-size: 0.35em;
 }
- .text-donate h2 i 
+ h2 i 
 {
     position: absolute;
     transform: translateX(-50%); 
     font-size: 18px;
     color: #7777;
     font-weight: 400;
+    font-size: initial;
+    line-height: 1em;
 }
- .text-donate h2 i::before
+ h2 i::before
 {
     position: absolute;
     text-align:center;
     content: 'Oxygen';
+    width: 100%;
+    display: initial;
+    transform: 0.5s;
 
 }  
+h2:hover i::before
+{
+    opacity: 0;
+    letter-spacing: 2em;
+}
+h2 i::after 
+{
+    content: 'Helping Thailand Breathe Again';
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+h2:hover i::after
+{
+    opacity: 1;
+    visibility: visible;
+}
