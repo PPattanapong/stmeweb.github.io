@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*
+{
+ margin: 0; /*margin ระยะขอบใช้เพื่อสร้างพื้นที่รอบ ๆ องค์ประกอบนอกขอบเขตที่กำหนดไว้ */
+ padding: 0; /*Padding ใช้เพื่อสร้างช่องว่างรอบ ๆ เนื้อหาขององค์ประกอบภายในขอบเขตที่กำหนดไว้ */
+ 
+ box-sizing: border-box;
+ font-family: 'Itim', sans-serif;
+}
+section
+{
+ position: relative;
+ width: 100%;
+ min-height: 100vh; /*vh อิงตามคามสูงของขนาดหน้า*/
+ padding: 100px;
+ justify-content: flex-start; /*จัดตำแหน่งรายการ*/
+ align-items: center; /*จัดตำแหน่งกึ่งกลางสำหรับรายการทั้งหมดขององค์ประกอบ <section>*/
+ overflow-x: hidden; /*ส่วนที่ล้นถูกตัดออกและส่วนที่เหลือของเนื้อหาจะมองไม่เห็น*/
+}
+section h2
+{   
+    position: relative;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    
+}
+section ul li 
+{
+    text-decoration: none;
+    display: table;
+    
+}
+section ul li a
+{   
+    color: #45a7ec;
+    font-weight: 600;
+    font-size: 2em; /*กำหนดขนาดตัวอักษรสำหรับ*/
+    margin-left: 10px;
+    user-select: none; /*ป้องกันการเลือกข้อความ*/   
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', sans-serif ;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h2 
+{
+    font-size: 6em;
+    text-align: center;
+}
+h2 span 
+{
+    position: relative;
+    display: inline-flex;
+    color: #03a9f4;
+}
+h2 span:nth-child(odd)
+{
+    color: #414141;
+    line-height: 1em;
+    overflow: hidden;
+    letter-spacing: -1em;
+    transition: 1s ease-in-out;
+}
+h2:hover span:nth-child(odd)
+{
+    letter-spacing: 0;
+}
+h2 span:nth-child(2)
+{
+    margin-right: 10px;
+}
+h2 span:nth-child(2)::before
+{
+    content: '2';
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    font-size: 0.35em;
+}
+h2 i 
+{
+    position: absolute;
+    transform: translateX(-50);
+}
+h2 i::before
+{
+    position: absolute;
+    text-align:center;
+    content: 'Oxygen';
+}
