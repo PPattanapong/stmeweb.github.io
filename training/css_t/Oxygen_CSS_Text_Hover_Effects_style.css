@@ -6,25 +6,39 @@
     box-sizing: border-box;
     font-family: 'Itim', sans-serif ;
 }
-body
+/* body
+{
+   
+} */
+/* .botton
+{   
+   
+} */
+.div-button
+{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px
+}
+.text-donate
 {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-h2 
+.text-donate h2 
 {
     font-size: 6em;
     text-align: center;
 }
-h2 span 
+.text-donate h2 span 
 {
     position: relative;
     display: inline-flex;
     color: #03a9f4;
 }
-h2 span:nth-child(odd)
+.text-donate h2 span:nth-child(odd)
 {
     color: #414141;
     line-height: 1em;
@@ -32,15 +46,15 @@ h2 span:nth-child(odd)
     letter-spacing: -1em;
     transition: 1s ease-in-out;
 }
-h2:hover span:nth-child(odd)
+.text-donate h2:hover span:nth-child(odd)
 {
     letter-spacing: 0;
 }
-h2 span:nth-child(2)
+.text-donate h2 span:nth-child(2)
 {
     margin-right: 10px;
 }
-h2 span:nth-child(2)::before
+.text-donate h2 span:nth-child(2)::before
 {
     content: '2';
     position: absolute;
@@ -48,14 +62,18 @@ h2 span:nth-child(2)::before
     right: -10px;
     font-size: 0.35em;
 }
-h2 i 
+ .text-donate h2 i 
 {
     position: absolute;
-    transform: translateX(-50);
+    transform: translateX(-50%); 
+    font-size: 18px;
+    color: #7777;
+    font-weight: 400;
 }
-h2 i::before
+ .text-donate h2 i::before
 {
     position: absolute;
     text-align:center;
     content: 'Oxygen';
-}
+
+}  
