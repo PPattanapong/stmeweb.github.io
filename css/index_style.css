@@ -106,6 +106,7 @@ header ul li a:hover
     border-radius: 40px; /*ตัดขอบ*/
     letter-spacing: 1px; /*ตั้งค่าระยะห่างของตัวอักษร*/
     text-decoration: none;
+    
 }
 .sci
 {
@@ -151,12 +152,12 @@ header ul li a:hover
 }
 
 /* now, make it responsive*/
-
+/* Media man width 991px กำหนดการแสดงเมื่อขนาดหน้าจอเล็กกว่า 991px*/
 @media (max-width: 991px)
 {
     section 
     {
-        position: 150px 20px;
+        padding: 150px 20px;
     }
     header
     {
@@ -164,6 +165,41 @@ header ul li a:hover
     }
     .navigation
     {
-       display: none; 
+        display: none; 
+    }
+    .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .toggle
+    {
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       width: 40px;
+       height: 40px; 
+       background: #3367f8 url(../images/menu.png);
+       background-size: 30px;
+       background-repeat: no-repeat; /*no-repeat ไม่สร้างภาพซำ*/
+       background-position: center;
+       cursor: pointer;
+       z-index: 1000;
+       border-radius: 2px;
+    }
+    .toggle.active
+    {
+        background: #3367f8 url(../images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat; /*no-repeat ไม่สร้างภาพซำ*/
+        background-position: center;
     }
 }
