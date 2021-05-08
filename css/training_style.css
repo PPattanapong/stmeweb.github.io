@@ -25,19 +25,21 @@ section h2
     justify-content: center;
     align-items: center;
 }
-section ul
+/* section ul
 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 10vh;
-    
-}
+
+}  */
 section ul li 
 {
     text-decoration: none;
-    display: table;
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px;
+    min-height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
 }
 section ul li a
