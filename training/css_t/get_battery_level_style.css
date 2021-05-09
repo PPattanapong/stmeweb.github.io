@@ -90,7 +90,7 @@ section.dark .box h3
     margin: 20px 0;
     border: 3px solid #333;
     border-radius: 10px;
-    overflow: hidden; /*ด้วยhiddenค่านี้ส่วนเกินจะถูกตัดออกและส่วนที่เหลือของเนื้อหาจะถูกซ่อนไว้:*/
+    
 }
 section.dark .batteryShape
 {
