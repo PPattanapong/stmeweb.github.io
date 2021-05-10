@@ -4,8 +4,10 @@
         <meta charset="utf-8">
         <title>Neon Light Button Animation</title>
         <link rel="stylesheet" href="css_t/Neon_Light_Button_Animation_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     </header>
     <body>
+        <div class="toggleBack"></div>
         <a href="#">
             <span></span>
             <span></span>
@@ -14,4 +16,10 @@
             Neon button
         </a>
     </body>
+    <script>
+        const toggleBack = document.querySelector('.toggleBack')
+        toggleBack.onclick = function(){
+            window.history.back();
+        }
+    </script>
 </html>

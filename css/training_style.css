@@ -24,11 +24,23 @@ section h2
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s);
 }
-/* section ul
+@keyframes slide_top
 {
-
-}  */
+    0%
+    {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 section ul li 
 {
     text-decoration: none;
@@ -40,13 +52,30 @@ section ul li
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
+
 section ul li a
 {   
     color: #45a7ec;
     font-weight: 600;
     font-size: 2em; /*กำหนดขนาดตัวอักษรสำหรับ*/
     margin-left: 10px;
-    user-select: none; /*ป้องกันการเลือกข้อความ*/   
+    user-select: none; /*ป้องกันการเลือกข้อความ*/  
+    opacity: 0;
+    animation: slide_bottom 0.5s linear forwards;
+    animation-delay: calc(0.3s * var(--i));
+}
+
+@keyframes slide_bottom
+{
+    0%
+    {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

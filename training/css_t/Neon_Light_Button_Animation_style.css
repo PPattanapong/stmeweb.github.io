@@ -90,3 +90,32 @@ a:hover span:nth-child(4)
     transition: 1s;
     transition-delay: 0.75s;
 }
+.toggleBack
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #031321;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.toggleBack:before
+{
+    content: '\f060';
+    font-family: fontAwesome;
+    font-size: 1.2em;
+    color: #fff;
+}
+.toggleBack:hover 
+{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3 , 0 0 80px #2196f3;
+}

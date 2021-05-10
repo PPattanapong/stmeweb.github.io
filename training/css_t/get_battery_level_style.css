@@ -188,3 +188,31 @@ section.dark .percent
     font-family: fontAwesome;
     color: black;
 }
+.toggleBack
+{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    background: #161623;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark .toggleBack
+{
+    background: #fff;
+}
+.toggleBack:before
+{
+    content: '\f060';
+    font-family: fontAwesome;
+    color: #fff;
+}
+.dark .toggleBack:before
+{
+    color: #161623;
+}
