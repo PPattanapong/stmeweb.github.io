@@ -4,11 +4,27 @@
         <meta charset="UTF-8">
         <title>Search Bar</title>
         <link rel="styleSheet" href="css_t/search_bar_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     </header>
     <body>
+        <div class="toggleBack"></div>
         <div class="search">
             <div class="icon"></div>
-            <div class="input"></div>
+            <div class="input">
+                <input type="text" placeholder="Search" id="mysearch">
+            </div>
+            <span class="clear" onclick="document.getElementById('mysearch').value =''"></span>
         </div>
     </body>
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+        icon.onclick = function(){
+            search.classList.toggle('active')
+        }
+        const toggleBack = document.querySelector('.toggleBack')
+        toggleBack.onclick =function(){
+            window.history.back();
+        }
+    </script>
 </html>

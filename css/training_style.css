@@ -62,10 +62,16 @@ section ul li a
     margin-left: 10px;
     user-select: none; /*ป้องกันการเลือกข้อความ*/  
     opacity: 0;
+    padding: 8px 18px;
     animation: slide_bottom 0.5s linear forwards;
     animation-delay: calc(0.3s * var(--i));
 }
-
+section ul li a:hover
+{   
+    background: #45a7ec; 
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
 @keyframes slide_bottom
 {
     0%
@@ -78,4 +84,24 @@ section ul li a
         transform: translateY(0px);
         opacity: 1;
     }
+}
+.toggleBack
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.toggleBack:before
+{
+    content: '\f060';
+    font-family: fontAwesome;
+    font-size: 1.5em;
+    color: #000000;
 }
