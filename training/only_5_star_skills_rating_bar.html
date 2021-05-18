@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8" />
+    <title>Only 5 Star Skills Rating Bar</title>
+    <link rel="stylesheet" href="css_t/only_5_star_skills_rating_bar.style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</header>
+
+<body>
+<section>
+    <div class="toggleBack"></div>
+    <div class="container">
+        <h2>My Skills </h2>
+        <div class="skills">
+            <h3 class="name">HTML</h3>
+            <div class="rating">
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio" checked name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+                <input type="radio"  name="html" />
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">CSS</h3>
+            <div class="rating">
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" name="css" />
+                <input type="radio" checked name="css" />
+                <input type="radio" name="css" />
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Javascript</h3>
+            <div class="rating">
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" name="js" />
+                <input type="radio" checked name="js" />
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Photoshop</h3>
+            <div class="rating">
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" checked name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+                <input type="radio" name="photoshop" />
+            </div>
+        </div>
+        <div class="skills">
+            <h3 class="name">Lightroom</h3>
+            <div class="rating">
+                <input type="radio" name="lightroom" />
+                <input type="radio" checked name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+                <input type="radio" name="lightroom" />
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        const toggleBack = document.querySelector('.toggleBack')
+        toggleBack.onclick = function(){
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

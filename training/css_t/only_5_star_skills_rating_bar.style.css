@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Itim", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  background: #001923;
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#2196f3, #838fff);
+  border-radius: 50%;
+  transform: translate(-300px, -180px);
+}
+section::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(#ffeb3b, #e91e63);
+  border-radius: 50%;
+  transform: translate(300px, 180px);
+}
+.container {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(25px);
+}
+.container h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color: #fff;
+}
+.container .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding-right: 10px;
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 30px rgba(0, 0, 0, 0.4);
+}
+.container .skills h3 {
+  min-width: 180px;
+  text-align: right;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.container .skills .rating {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row-reverse;
+}
+.container .skills .rating input {
+  position: relative;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* cursor: pointer; */
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+}
+.container .skills .rating input::before {
+  content: "\f005";
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 34px;
+  position: absolute;
+  left: 4px;
+  color: #030b0f;
+  transition: 0.5s;
+}
+.container .skills .rating input:nth-child(2n + 1)::before {
+  right: 4px;
+  left: initial;
+}
+/* .container .skills .rating input:hover ~ input::before,
+.container .skills .rating input:hover::before,
+.container .skills .rating input:checked ~ input::before,
+.container .skills .rating input:checked::before
+{
+    color: #1f9cff;
+} */
+@media (max-width: 768px) {
+  section::before {
+    transform: translate(-200px, -180px);
+  }
+  section::after {
+    transform: translate(220px, 180px);
+  }
+}
+.container .skills .rating input:checked ~ input::before,
+.container .skills .rating input:checked:before {
+  color: #1f9cff;
+}
+
+.toggleBack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.toggleBack:before {
+  content: "\f060";
+  font-family: fontAwesome;
+  font-size: 1.2em;
+  color: #fff;
+}
