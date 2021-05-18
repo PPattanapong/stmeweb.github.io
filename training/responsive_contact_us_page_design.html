@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Contact Us Page Design</title>
+    <link
+      rel="stylesheet"
+      href="css_t/responsive_contact_us_page_design.style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+    />
+  </header>
+  <body>
+    <div class="toggleBack"></div>
+    <section>
+      <div class="container">
+        <h2>Contact Us Form</h2>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span class="text">First Name</span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span class="text">Last Name</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span class="text">Email</span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span class="text">Mobile</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox textarea">
+              <textarea required="required"></textarea>
+              <span class="text">Type Your Message Here...</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row100">
+          <div class="col">
+            <input type="submit" value="send" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+      const toggleBack = document.querySelector('.toggleBack')
+      toggleBack.onclick = function(){
+          window.history.back();
+      }
+  </script>
+</html>
