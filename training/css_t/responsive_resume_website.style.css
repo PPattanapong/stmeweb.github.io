@@ -106,11 +106,106 @@ body
 .contactInfo ul li span
 {
     color: #fff;
+    font-weight: 500;
 }
 
+.contactInfo.education
+{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+    font-size: 1em;
+}
+.contactInfo.education h4:nth-child()
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4
+{
+    color: #fff;
+    font-weight: 500;
+}
+/* .contactInfo.language .percent
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}  */
+/* .contactInfo.language .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+} */
 .container .right_side
 {
     position: relative;
     background: #fff;
     padding: 40px;
+}
+.about
+{
+    margin-bottom: 30px;
+}
+.about h2
+{
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #003147;
+}
+.about.skill .box
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.about.skill .box h4
+{
+    /* text-transform: uppercase; */
+    color: #6d737c;
+    font-weight: 500;
+
+}
+.about.skill .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.about.skill .box .percent div
+{
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+/* .about .box
+{
+     display: flex;
+    flex-direction: row; 
+} */
+
+.about .box .text h4
+{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.about .box .text p
+{   
+    padding-left: 15px;
 }
